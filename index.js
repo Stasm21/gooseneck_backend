@@ -21,9 +21,9 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/api/get", (req, res) => {
-    const sqlInsert = "SELECT * FROM questions";
-    db.query(sqlInsert, (err, result) => {
-
+    const sqlSelect = "SELECT * FROM questions";
+    db.query(sqlSelect, (err, result) => {
+        res.send(result);
     });
 });
 
