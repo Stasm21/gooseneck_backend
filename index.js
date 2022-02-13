@@ -41,6 +41,8 @@ app.listen(8000, () => {
     console.log("running on port 3001");
 });
 
+// try this
+
 // app.get('/api/get', (req, res) => {
 //     const sqlInsert = "SELECT * FROM questions";
 //     db.query(sqlInsert, (err, result) => {
