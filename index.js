@@ -5,11 +5,12 @@ const cors = require("cors");
 const mysql = require("mysql");
 
 const db = mysql.createConnection({
-    host: "127.0.0.1",
-    user: "root",
-    password: "password",
-    database: "gooseneck_Database",
+    host: "us-cdbr-east-05.cleardb.net",
+    user: "b290815ace9550",
+    password: "f11f0086",
+    database: "heroku_ca2c199a21afb5b",
 });
+
 
 db.connect((err) => {
     if (err) throw err;
