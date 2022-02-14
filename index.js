@@ -21,6 +21,12 @@ const db = mysql.createConnection({
 // DATABASE_PASSWORD = "password";
 // DATABASE_NAME = "gooseneck_Database";
 
+mysql://b43cb4fdc1edd0:f7f915c1@us-cdbr-east-05.cleardb.net/heroku_3172a7d718e50cd?reconnect=true
+
+// user b43cb4fdc1edd0
+// password f7f915c1
+// host us-cdbr-east-05.cleardb.net
+// database heroku_3172a7d718e50cd
 
 
 db.connect((err) => {
