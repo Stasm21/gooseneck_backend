@@ -29,10 +29,11 @@ const db = mysql.createPool({
 // database heroku_3172a7d718e50cd
 
 
-db.connect((err) => {
-    if (err) throw err;
-    console.log("Mysql Connected...");
-});
+// db.connect((err) => {
+//     if (err) throw err;
+//     console.log("Mysql Connected...");
+// });
+
 
 app.use(cors());
 app.use(express.json());
