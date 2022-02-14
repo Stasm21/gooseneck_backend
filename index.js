@@ -3,14 +3,24 @@ const bodyParser = require("body-parser");
 const app = express();
 const cors = require("cors");
 const mysql = require("mysql");
+require('dotenv').config();
+
+
 const PORT = process.env.PORT || 5001;
 
+
 const db = mysql.createConnection({
-    host: "us-cdbr-east-05.cleardb.net",
-    user: "b290815ace9550",
-    password: "f11f0086",
-    database: "heroku_ca2c199a21afb5b",
+    host: process.env.DATABASE_HOST,
+    user: process.env.DATABASE_USER,
+    password: process.env.DATABASE_PASSWORD,
+    database: process.env.DATABASE_NAME,
 });
+
+// DATABASE_HOST = "127.0.0.1";
+// DATABASE_USER = "root";
+// DATABASE_PASSWORD = "password";
+// DATABASE_NAME = "gooseneck_Database";
+
 
 
 db.connect((err) => {
