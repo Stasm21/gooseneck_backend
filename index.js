@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const cors = require("cors");
 const mysql = require("mysql");
+const PORT = process.env.PORT || 5001;
 
 const db = mysql.createConnection({
     host: "us-cdbr-east-05.cleardb.net",
@@ -39,9 +40,11 @@ app.post("/api/insert", (req, res) => {
 });
 
 
-app.listen(process.env.PORT || PORT, () => {
-    console.log(`Server running on port ${PORT}`)
-})
+app.listen(PORT, () => console.log(`Server is listening on port ${PORT}...`));
+
+// app.listen(process.env.PORT || PORT, () => {
+//     console.log(`Server running on port ${PORT}`)
+// })
 
 // app.listen(8000, () => {
 //     console.log("running on port 3001");
