@@ -42,6 +42,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/api/get", (req, res) => {
     const sqlSelect = "SELECT * FROM questions";
     db.query(sqlSelect, (err, result) => {
+        if (err) {
+            res.status(500).send(err);
+        }
         res.send(result);
     });
 });
@@ -52,7 +55,10 @@ app.post("/api/insert", (req, res) => {
 
     const sqlInsert = "INSERT INTO questions (topic, question) VALUES (?, ?)";
     db.query(sqlInsert, [topic, question], (err, result) => {
-
+        if (err) {
+            res.status(500).send(err)
+        }
+        res.send(result);
     });
 });
 
